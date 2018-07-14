@@ -1,0 +1,75 @@
+ <div class="card">
+  <div class="card-header">
+    {{wordtosearch}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Meanings</h5>
+    <p class="card-text" *ngFor="let mn of m;let i = index ">
+     <li class="b" *ngFor="let d of mn;let j = index ">{{d.definitions}} <br/> 
+      <ul  *ngFor="let sd of d.subsenses">        
+        <li class="bb" *ngFor="let sdd of sd.definitions">{{sdd}}</li>
+            <a  (click)="shn(sd)"><span class="glyphicon glyphicon-plus">more</span></a><br/>  
+            <span *ngIf="showexn"><p class="card-text"  *ngFor="let sde of sd.examples"><li class="exxx" >{{sde.text}}</li></p>
+          </span>
+      </ul>
+    </li>
+        <a  (click)="sh(itm=mn[j])"><span class="glyphicon glyphicon-plus">Examples</span></a><br/>  
+        <span *ngIf="showex"><p class="card-text"  *ngFor="let exam of mn"><li class="examp" *ngFor="let exx of exam.examples">{{exx.text}}</li></p>
+      </span>
+    </p>   
+    <br/>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Verb</h5>
+    <p class="card-text" *ngFor="let vb of verb ;let i = index ">
+        <span  *ngFor="let vbb of vb.entries;let j = index ">
+          <ul><li class="b" *ngFor="let vd of vbb.senses">{{vd.definitions}}</li></ul>
+         <br/> 
+         
+           <a  (click)="showverb(vb)"><span class="glyphicon glyphicon-plus">Examples</span></a><br/>  
+           <span *ngIf="ver"><p class="card-text"  *ngFor="let exv of vbb.senses"><li class="examp" *ngFor="let exvv of exv.examples">{{exvv.text}}</li></p>
+         </span>
+        </span>
+    </p>
+    <br/>
+  </div>
+  <div class="card-body">
+      <h5 class="card-title">Adverb</h5>
+      <p class="card-text" *ngFor="let adm of adverb ;let i = index ">
+          <span  *ngFor="let dad of adm.entries;let j = index ">
+            <ul><li class="b" *ngFor="let da of dad.senses">{{da.definitions}}</li></ul>
+           <br/> 
+           
+             <a  (click)="showadj(adm)"><span class="glyphicon glyphicon-plus">Examples</span></a><br/>  
+             <span *ngIf="adjsh"><p class="card-text"  *ngFor="let exam of dad.senses"><li class="examp" *ngFor="let exx of exam.examples">{{exx.text}}</li></p>
+           </span>
+          </span>
+      </p>
+      <br/>
+    </div>  
+
+    <div class="card-body">
+        <h5 class="card-title">Phrases</h5>
+        <a  (click)="finalphrasesmathod()"><span class="glyphicon glyphicon-plus"></span></a><br/>
+        <div *ngIf="v">
+        <p class="card-text" *ngFor="let obp of objarray"><span class="b">{{obp.phrasename}}</span> : {{obp.phrasedef}}<br/></p>
+      </div>
+        <br/>
+    </div>
+  <div class="card-body">
+    <h5 class="card-title">Synonyms</h5>
+    <p class="card-text" *ngIf="synonymlist!=null"><li class="synam" *ngFor="let sn of synonymlist">{{sn}}<br/></li></p>
+    <br/>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Antonyms</h5>
+    <p class="card-text" *ngIf="antonymlist!=null"><li class="synam" *ngFor="let an of antonymlist">{{an}}<br/></li></p>
+    <br/>
+  </div>
+  <div class="card-body">
+      <h5 class="card-title">Origin</h5>
+      <p class="card-text" *ngFor="let f of finor">{{f}}<br/></p>
+      <br/>
+    </div>
+</div>
+ 

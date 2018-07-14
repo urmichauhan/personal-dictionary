@@ -1,0 +1,73 @@
+.card {
+    border : 3px rgb(67, 14, 92) double;
+    border-radius: 5px;
+    max-width: 70vw;
+    background-color: beige;
+    margin-left: 10px;
+}
+.card .card-header {
+    font-size: 3rem;
+    color :rgb(226, 45, 99);
+    font-family:Arial, Helvetica;
+    font-weight: bolder;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-bottom: 2px darkslateblue groove;
+    text-shadow: 3px 0 1px darkgray;
+}
+.card .card-body .card-title {
+    font-size: 2.5rem;
+    color:rgb(46, 3, 46);
+    font-family: 'Lucida Sans Unicode', Geneva;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-top: 1px rgb(53, 11, 66) groove;
+}
+.glyphicon {
+    color:rgb(46, 3, 46);
+}
+.card .card-body .card-text {
+    font-size: 1.5rem;
+    color:rgb(36, 15, 21);
+    font-family:  'Lucida Grande', Verdana;
+    font-weight: 300;
+}
+.card .card-body .card-text .b {
+    font-size: 1.4rem;
+    color:rgb(36, 15, 21);
+    font-family:  'Lucida Grande', Verdana;
+    font-weight: 600;
+    list-style:decimal;
+    list-style-type:decimal;
+}
+.card .card-body .card-text .b .bb {
+    font-size: 1.3rem;
+    color:rgb(36, 15, 21);
+    font-family:  'Lucida Grande', Verdana;
+    font-weight: 500;
+    list-style: lower-roman;
+    list-style-type: lower-roman;
+}
+.bbb {
+    list-style: none;
+    list-style-type:none;
+}
+.examp {  
+    list-style-type:circle;
+    font-size: 1.2rem;
+}
+.exxx {  
+    list-style-type:circle;
+    font-size: 1.2rem;
+}
+.card .card-body .card-text a:hover {
+    cursor: pointer;
+}
+.synam {
+    list-style-type:square;
+}
+
+
+

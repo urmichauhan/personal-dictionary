@@ -1,0 +1,30 @@
+{
+    "/oxford": {
+      "target":"https://od-api.oxforddictionaries.com:443/api/v1/search/en/translations=es?q=",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "headers": {
+        "Accept": "application/json",
+        "app_id": "4515d6e4",
+        "app_key": "c67966a23b049619412fe36f38382217"
+      },
+      "pathRewrite": {"^/oxford" : ""}
+    },
+
+    "/sa": {
+      "target":"https://od-api.oxforddictionaries.com:443/api/v1/entries/en/",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "headers": {
+        "Accept": "application/json",
+        "app_id": "4515d6e4",
+        "app_key": "c67966a23b049619412fe36f38382217"
+      },
+      "pathRewrite": {"^/sa" : ""}
+    }
+}
+
+
+  
